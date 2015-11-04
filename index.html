@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link type="text/css" media="all" rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+	<div id="gallery-1">
+		<ul>
+			<li><img class="thumbnails" data-myattr="img/large/1.png" src="img/thumb/1.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/2.png" src="img/thumb/2.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/3.png" src="img/thumb/3.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/4.png" src="img/thumb/4.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/1.png" src="img/thumb/1.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/2.png" src="img/thumb/2.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/3.png" src="img/thumb/3.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/4.png" src="img/thumb/4.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/1.png" src="img/thumb/1.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/2.png" src="img/thumb/2.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/3.png" src="img/thumb/3.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/4.png" src="img/thumb/4.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/1.png" src="img/thumb/1.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/2.png" src="img/thumb/2.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/3.png" src="img/thumb/3.png"></li>
+			<li><img class="thumbnails" data-myattr="img/large/4.png" src="img/thumb/4.png"></li>
+		</ul>
+	</div>
+
+	<div id="overlay">
+		<div id="mainPic">
+			<div id="close">X</div>
+			<img src="img/large/1.png">
+		</div>
+	</div>
+
+<!-- 	JS scripts -->
+
+	 <script type="text/javascript">
+	 	// grab data-myattr when thumbnail click and throw it into the main pic + turn on overlay
+		$('#gallery-1 li').click(function(event){
+			var $viewed = $(this).children('img').attr('data-myattr');
+			$('#overlay').css('display','block');
+		    $('#mainPic img').attr('src', $viewed);
+		});
+
+		// turn off overlay
+		$('#close').click(function(){
+			$('#overlay').css('display','none');
+		});
+
+	 </script>
+  </body>
+</html>
