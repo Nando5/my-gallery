@@ -15,9 +15,11 @@ li {
 	text-align: center;
 	width: 80%;
 	margin: 0 auto;
+	cursor: pointer;
 }
 
 #overlay {
+	display: none;
 	background-color: rgba(0, 0, 0, 0.75);
 	position: fixed;
     top: 0;
